@@ -1,0 +1,9 @@
+#%Module
+
+prepend-path PATH /opt/homebrew/Cellar/llvm/16.0.6/bin
+prepend-path DYLD_PATH /opt/homebrew/Cellar/llvm/16.0.6/lib
+prepend-path LIBRARY_PATH /opt/homebrew/Cellar/llvm/16.0.6/lib
+prepend-path INCLUDE /opt/homebrew/Cellar/llvm/16.0.6/include
+prepend-path CMAKE_PREFIX_PATH /opt/homebrew/Cellar/llvm/16.0.6
+setenv CC clang
+setenv CXX clang++

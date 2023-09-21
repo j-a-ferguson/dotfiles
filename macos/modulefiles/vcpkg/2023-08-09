@@ -1,0 +1,3 @@
+#%Module
+setenv VCPKG_ROOT /Users/jaf13/projects/opt/vcpkg
+prepend-path PATH /Users/jaf13/projects/opt/vcpkg
