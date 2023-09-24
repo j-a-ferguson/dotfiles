@@ -25,6 +25,15 @@ brew install --cask visual-studio-code
 brew install --cask obsidian    
 brew install --cask pdf-expert
 brew install --cask docker
+brew install --cast 1password
+brew install --cask 1password-cli
+brew install gh # the github cli
+
+# setup ssh 
+mkdir ~/.ssh
+cp ssh/config ~/.ssh
+
+
 
 # Install C++ development tools
 brew install llvm
@@ -32,6 +41,7 @@ brew install cmake
 brew install ninja
 brew install doxygen
 brew install modules
+
 # install vcpkg
 cd $HOME/projects/opt
 git clone https://github.com/Microsoft/vcpkg.git
