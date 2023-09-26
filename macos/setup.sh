@@ -28,11 +28,12 @@ brew install --cask docker
 brew install --cast 1password
 brew install --cask 1password-cli
 brew install gh # the github cli
+brew install --cask affinity-designer
+brew install --cask affinity-publisher
 
 # setup ssh 
 mkdir ~/.ssh
 cp ssh/config ~/.ssh
-
 
 
 # Install C++ development tools
