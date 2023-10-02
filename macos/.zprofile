@@ -3,7 +3,12 @@ echo "============================= Running .zprofile ==========================
 
 set -o xtrace
 # Homebrew setup
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [[ "$(uname -m)" == "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ "(uname -m)" == "x86_64" ]]; then 
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # echo "  Setting Vscode defaults"
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code

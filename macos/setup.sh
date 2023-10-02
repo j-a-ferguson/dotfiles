@@ -12,8 +12,12 @@ cd $cwd
 
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jaf13/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [[ "$(uname -m)" == "arm64" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ "(uname -m)" == "x86_64"]]; then 
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # Create a projects folder and scaffold for later installations
 mkdir -p $HOME/projects/opt
