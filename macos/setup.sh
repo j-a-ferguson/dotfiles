@@ -52,6 +52,9 @@ cd $HOME/projects/opt
 git clone https://github.com/Microsoft/vcpkg.git
 ./vcpkg/bootstrap-vcpkg.sh
 
+#install Java 
+brew install openjdk
+
 # Install python
 brew install python
 
