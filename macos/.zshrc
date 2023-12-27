@@ -9,7 +9,12 @@ export PROMPT='%B%F{magenta}%1~:%b  %f'
 alias ls="ls -G"
 
 # setup modules
-source /opt/homebrew/opt/modules/init/zsh
+if [[ "$(uname -m)" == "arm64" ]]; then
+    HOMEBREW_HOME=/opt/homebrew
+elif [[ "$(uname -m)" == "x86_64" ]]; then 
+    HOMEBREW_HOME=/usr/local
+fi
+source $HOMEBREW_HOME/opt/modules/init/zsh
 module use $HOME/projects/opt/modulefiles
 
 # setup ssh 
