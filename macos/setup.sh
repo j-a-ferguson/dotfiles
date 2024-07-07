@@ -34,6 +34,9 @@ brew install --cask 1password-cli
 brew install gh # the github cli
 brew install --cask affinity-designer
 brew install --cask affinity-publisher
+if [[ "$(uname -m)" == "arm64" ]]; then
+    brew install --cask chatgpt
+fi
 
 # setup ssh 
 mkdir ~/.ssh
@@ -57,6 +60,10 @@ brew install openjdk
 
 # Install python
 brew install python
+
+# install ruby (for Jekyll) 
+brew install chruby ruby-install zx
+ruby-install ruby 3.1.3
 
 # Install javascript/typescript for vs code devleopment
 brew install node
